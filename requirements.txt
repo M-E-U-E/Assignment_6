@@ -1,0 +1,4 @@
+Django==4.2
+psycopg2-binary==2.9.7
+gunicorn==21.0.1
+django-postgres-extensions==0.9.3
