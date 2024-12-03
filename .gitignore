@@ -1,0 +1,41 @@
+# Python related
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# IDE files
+.idea/
+.vscode/
+
+# Compiled output
+*.so
+*.pyc
+*.pyo
+*.pyd
+
+# Log files
+*.log
+
+# Compiled python modules
+*.pyc
+
+# Compiled output
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Misc
+.DS_Store
+Thumbs.db
