@@ -47,3 +47,15 @@ class LocalizeAccommodation(models.Model):
 
     def __str__(self):
         return f"{self.property_id.title} ({self.language})"
+
+class User(models.Model):
+    username = models.CharField(max_length=150, unique=True)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=128)
+
+class PropertyOwner(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.EmailField(unique=True)
+    phone = models.CharField(max_length=15)
+    address = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)

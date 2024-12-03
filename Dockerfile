@@ -21,7 +21,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the project into the container
 COPY . ./app/
-
+# Collect static files
+RUN python manage.py collectstatic --noinput
 # # Run Django server
 # CMD ["gunicorn", "inventory_management.wsgi:application", "--bind", "0.0.0.0:8000"]
 # Command to run the Django app
