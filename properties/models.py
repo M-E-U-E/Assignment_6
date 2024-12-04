@@ -1,11 +1,12 @@
+from django.db import models
+from django.db.models import JSONField
 from django.contrib.gis.db import models
 from django.contrib.auth.models import User
-from django.db.models import JSONField  # Updated import for JSONField
 
 class Location(models.Model):
     id = models.CharField(max_length=20, primary_key=True)
     title = models.CharField(max_length=100)
-    center = models.PointField()
+    center = models.PointField() 
     parent_id = models.ForeignKey(
         'self', on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -28,7 +29,7 @@ class Accommodation(models.Model):
     bedroom_count = models.PositiveIntegerField()
     review_score = models.DecimalField(max_digits=4, decimal_places=1, default=0.0)
     usd_rate = models.DecimalField(max_digits=10, decimal_places=2)
-    center = models.PointField()
+    center = models.PointField() 
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)  # Corrected indentation
     published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)

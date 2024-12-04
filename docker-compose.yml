@@ -1,4 +1,4 @@
-version: "3.9"
+# version: "3.9"
 
 services:
   web:
@@ -16,7 +16,7 @@ services:
       - .env
 
   db:
-    image: postgis/postgis:15-3.3-alpine
+    image: postgis/postgis:latest
     container_name: postgres_db
     environment:
       POSTGRES_USER: postgres

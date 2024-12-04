@@ -2,6 +2,7 @@
 {% block title %}User Sign-Up{% endblock %}
 {% block content %}
 <form action="" method="post">
+    {% csrf_token %}
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
     <label for="email">Email:</label>
@@ -9,5 +10,8 @@
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
     <button type="submit">Sign Up</button>
+    {% if error_message %}
+        <p style="color:red;">{{ error_message }}</p>
+    {% endif %}
 </form>
 {% endblock %}

@@ -17,81 +17,83 @@ body {
 
 header {
     text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
+    padding: 15px;
+    background-color: #4CAF50; /* Green */
     color: white;
-    font-size: 24px;
+    font-size: 26px; /* Slightly larger font size */
     font-weight: bold;
-    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-bottom: 30px; /* Increased space below header */
 }
 
 /* Form Styling */
 .form-container {
     background-color: white;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px 35px; /* Increased padding for better spacing */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Increased bottom margin for spacing */
     text-align: center;
-    color: #4CAF50;
+    color: #4CAF50; /* Consistent color with header */
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increased space between form groups */
 }
 
 label {
     display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: 15px; /* Slightly larger font size for labels */
+    margin-bottom: 8px; /* Increased space below labels */
 }
 
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increased padding for comfort */
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 5px; /* Slightly more rounded corners */
+    font-size: 15px; /* Larger font size for inputs */
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
-    border-color: #4CAF50;
-    outline: none;
+    border-color: #4CAF50; /* Highlight on focus */
+    outline: none; /* Remove default outline */
 }
 
 button.btn {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green button */
     color: white;
-    padding: 10px 15px;
+    padding: 12px; /* Increased padding for buttons */
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 17px; /* Larger button text */
     cursor: pointer;
     width: 100%;
 }
 
 button.btn:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker green on hover */
 }
 
 p {
     text-align: center;
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 15px; /* Slightly larger paragraph text */
+    margin-top: 15px; /* Increased top margin for spacing */
 }
 
 a {
-    color: #4CAF50;
+    color: #4CAF50; /* Link color matches theme */
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover for links */
 }

@@ -23,5 +23,6 @@ urlpatterns = [
     path('signup/', views.user_signup, name='user_signup'),
     path('login/', views.user_login, name='user_login'),
     path('owner-signup/', views.owner_signup, name='owner_signup'),
+    path('activation/', views.activation, name='activation'),  # Add activation page URL
     path('', views.home, name='home'),
 ]

@@ -10,10 +10,9 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    gcc \
-    libpq-dev \
     gdal-bin \
-    postgresql-client
+    libgdal-dev \
+    python3-gdal 
 
 # Install Python dependencies
 COPY requirements.txt .
@@ -22,7 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the project into the container
 COPY . ./app/
 # Collect static files
-RUN python manage.py collectstatic --noinput
+# RUN python manage.py collectstatic --noinput
 # # Run Django server
 # CMD ["gunicorn", "inventory_management.wsgi:application", "--bind", "0.0.0.0:8000"]
 # Command to run the Django app
