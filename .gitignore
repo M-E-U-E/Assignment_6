@@ -22,9 +22,6 @@ venv/
 # Log files
 *.log
 
-# Compiled python modules
-*.pyc
-
 # Compiled output
 dist/
 tmp/
@@ -36,6 +33,35 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
+# Django-specific
+*/migrations/*.py
+*/migrations/*.pyc
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static/
+
+# Docker-specific
+docker-compose.override.yml
+.dockerignore
+*.swp
+
+# Testing and coverage
+.coverage
+htmlcov/
+*.cover
+.coverage.*
+.pytest_cache/
+
+# Fixture files
+*.json
+
 # Misc
 .DS_Store
 Thumbs.db
+
+# Archives
+*.zip
+*.tar.gz
+*.rar

@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "title": "Australia",
+    "country_code": "au",
+    "locations": [
+      {
+        "title": "Sydney",
+        "url": "au/sydney"
+      }
+    ]
+  },
+  {
+    "title": "Brazil",
+    "country_code": "br",
+    "locations": [
+      {
+        "title": "Rio de Janeiro",
+        "url": "br/rio-de-janeiro"
+      }
+    ]
+  },
+  {
+    "title": "Canada",
+    "country_code": "ca",
+    "locations": [
+      {
+        "title": "Ontario",
+        "url": "ca/ontario"
+      }
+    ]
+  },
+  {
+    "title": "France",
+    "country_code": "fr",
+    "locations": [
+      {
+        "title": "Paris",
+        "url": "fr/paris"
+      }
+    ]
+  },
+  {
+    "title": "Germany",
+    "country_code": "de",
+    "locations": [
+      {
+        "title": "Berlin",
+        "url": "de/berlin"
+      }
+    ]
+  },
+  {
+    "title": "India",
+    "country_code": "in",
+    "locations": [
+      {
+        "title": "Mumbai",
+        "url": "in/mumbai"
+      }
+    ]
+  },
+  {
+    "title": "South Africa",
+    "country_code": "za",
+    "locations": [
+      {
+        "title": "Cape Town",
+        "url": "za/cape-town"
+      }
+    ]
+  }
+]
