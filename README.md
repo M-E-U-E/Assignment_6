@@ -34,7 +34,7 @@ To clone this project to your local machine, follow these steps:
    
     Go to the Directory:
     ```bash
-    cd assignment_6
+    cd Assignment_6
     ```
 4. **Set Up Virtual Environment**
    
