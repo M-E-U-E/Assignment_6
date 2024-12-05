@@ -7,6 +7,7 @@ Development of a geospatially-enabled Property Management System using Django an
 - [Description](#description)
 - [Git Clone Instructions](#git-clone-instructions)
 - [Access the Application](#access_the_application)
+- [Sitemap Generation](#sitemap_generation)
 - [Test](#test)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
@@ -89,6 +90,12 @@ To clone this project to your local machine, follow these steps:
       The Signup panel can be accessed at http://127.0.0.1:8000/signup.
       The Login panel can be accessed at http://127.0.0.1:8000/login.
 
+## Sitemap Generation
+   Run this code:
+   ```
+      python manage.py generate_sitemap
+   ```
+   This will create a sitemap.json containing all property locations.
 
 ## Test
   Run the testing file:
