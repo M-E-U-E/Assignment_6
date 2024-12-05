@@ -6,13 +6,15 @@ Development of a geospatially-enabled Property Management System using Django an
 ## Table of Contents
 - [Description](#description)
 - [Git Clone Instructions](#git-clone-instructions)
-- [How to Run](#how-to-run)
-- [Features](#features)
+- [Access the Application](#access_the_application)
+- [Test](#test)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
-- [Validations](#validations)
+- [Code Coverage](#code_coverage)
 - [Schema](#schema)
+- [Authorization Rules](#authorization_rules)
 - [Dependencies](#dependencies)
+- [Remember](#remember)
 
 
 ## Description
@@ -22,8 +24,6 @@ The project aims to create a robust Django-based Property Management System with
 ## Git Clone Instructions
 
 To clone this project to your local machine, follow these steps:
-
-
 
 1. **Open terminal (Command Prompt, PowerShell, or Terminal)**
 
@@ -69,18 +69,20 @@ To clone this project to your local machine, follow these steps:
       docker compose up
    ```
 
-This will start both the PostgreSQL/PostGIS container and the Django application container.
+   This will start both the PostgreSQL/PostGIS container and the Django application container.
+   
+   Apply Migrations in Docker After the containers are up, run the migrations inside the Django container:
+   ```
+   docker exec -it web python manage.py migrate
+   ```
+   
+   Create a Superuser in Docker Create a superuser to access the admin panel:
+   ```
+   docker exec -it web python manage.py createsuperuser
+   ```
+   then create superuser
 
-Apply Migrations in Docker After the containers are up, run the migrations inside the Django container:
-```
-docker exec -it assignment_6 python manage.py migrate
-```
-
-Create a Superuser in Docker Create a superuser to access the admin panel:
-```
-docker exec -it assignment_6 python manage.py createsuperuser
-```
-Access the Application
+##Access the Application
 
 The Django application will be available at http://127.0.0.1:8000.
 The admin panel can be accessed at http://127.0.0.1:8000/admin.
@@ -101,7 +103,6 @@ The Login panel can be accessed at http://127.0.0.1:8000/login.
    ```
       xdg-open htmlcov/index.html
    ```
-   ### Endpoint Operations & Testing Guide
     
 
 ## Project Structure
@@ -165,36 +166,80 @@ Assignment_6/           # Root Django project directory
 - **Code Coverage: Coverage.py for tracking test coverage of the project
 - 
 ## Code Coverage  
-  
+      Coverage report: 97%
+      - Files
+        - inventory_management/__init__.py
+        - inventory_management/settings.py
+        - inventory_management/urls.py
+        - manage.py
+        - properties/__init__.py
+        - properties/admin.py
+        - properties/apps.py
+        - properties/migrations/__init__.py
+        - properties/migrations/0001_initial.py
+        - properties/migrations/0002_propertyowner_user.py
+        - properties/models.py
+        - properties/tests.py
+        - properties/views.py
+      - Functions
+      - Classes
 
 
 ## Schema
   Database Schema (In-Memory):
-  ```bash
   Users Table:
   +----------+-----------+----------+-------+
   | id       | username  | email    | role  |
   +----------+-----------+----------+-------+
   | string   | string    | string   | string|
   +----------+-----------+----------+-------+
+
+  Accommodations Table:
+  +----------+----------+---------------+--------+--------+-------------+----------+----------+------------+------------+
+  | id       | feed     | title         | country_code | bedroom_count | review_score | usd_rate | center     | user_id    | published |
+  +----------+----------+---------------+--------+--------+-------------+----------+----------+------------+------------+
+  | string   | int      | string        | string | int     | decimal     | decimal  | PointField | ForeignKey | bool      |
+  +----------+----------+---------------+--------+--------+-------------+----------+----------+------------+------------+
+
+  LocalizeAccommodations Table:
+  +----------+---------------+----------+-------------+--------+
+  | id       | property_id   | language | description | policy |
+  +----------+---------------+----------+-------------+--------+
+  | int      | ForeignKey    | string   | text        | JSON   |
+  +----------+---------------+----------+-------------+--------+
+
+  Locations Table:
+  +----------+--------+-------------+----------+----------------+-------------+----------+----------+------------+------------+
+  | id       | title  | center      | parent_id| location_type  | country_code| state_abbr| city     | created_at | updated_at |
+  +----------+--------+-------------+----------+----------------+-------------+----------+----------+------------+------------+
+  | string   | string | PointField  | ForeignKey| string         | string      | string   | string   | datetime   | datetime   |
+  +----------+--------+-------------+----------+----------------+-------------+----------+----------+------------+------------+
+
+  PropertyOwners Table:
+  +----------+--------+----------+----------+-------------+------------+
+  | id       | name   | email    | phone    | address     | created_at |
+  +----------+--------+----------+----------+-------------+------------+
+  | string   | string | string   | string   | text        | datetime   |
+  +----------+--------+----------+----------+-------------+------------+
   
-  Destinations Table:
-  +----+--------+-------------+----------+
-  | id | name   | description | location |
-  +----+--------+-------------+----------+
-  | int| string | string      | string   |
-  +----+--------+-------------+----------+
-  ```
-  # Authorization Rules:
+  ## Authorization Rules:
    ```
-      Role Permissions:
-    ├── Admin
-    │   ├── View all destinations
-    │   ├── Delete destinations
-    │   └── Access all profiles
-    └── User
-        ├── View destinations
-        └── Access own profile
+     Role Permissions:
+      ├── Admin
+      │   ├── View all Locations
+      │   ├── Create, Update, and Delete Locations
+      │   ├── View all Accommodations
+      │   ├── Create, Update, and Delete Accommodations
+      │   ├── View all LocalizeAccommodations
+      │   ├── Create, Update, and Delete LocalizeAccommodations
+      │   ├── View all Users
+      │   └── Create, Update, and Delete Users
+      └── User
+       ├── View Locations
+       ├── View Accommodations
+       ├── Create, Update, and Delete their own LocalizeAccommodations
+       ├── View their own User profile
+       └── Update their own User profilee
    ```
  ## Dependencies
     Django: Web framework for building scalable and robust backend applications.
