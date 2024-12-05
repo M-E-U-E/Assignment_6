@@ -164,7 +164,7 @@ Assignment_6/           # Root Django project directory
 - **Version Control: Git for tracking changes and collaboration
 - **Fixtures: JSON files for preloading test and initial data into the database
 - **Code Coverage: Coverage.py for tracking test coverage of the project
-- 
+  
 ## Code Coverage  
       Coverage report: 97%
       - Files
