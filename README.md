@@ -37,15 +37,16 @@ To clone this project to your local machine, follow these steps:
 3. **Set Up Virtual Environment**
    
     ```bash
-    # Create virtual environment
-    python -m venv venv
-    
+    # Create virtual environment On macOS/Linux:
+       python -m venv env
+       source venv/bin/activate
+       pip install django
     # Activate virtual environment
-    # On Windows:
-    venv\Scripts\activate
-    pip install django
-    # On macOS/Linux:
-    source venv/bin/activate
+    # Create virtual environment On Windows:
+       python -m venv env
+       venv\Scripts\activate
+       pip install django
+    
     ```
     Install Dependencies
     ```bash
