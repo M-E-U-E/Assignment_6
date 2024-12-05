@@ -29,7 +29,8 @@ To clone this project to your local machine, follow these steps:
 1. **Open terminal (Command Prompt, PowerShell, or Terminal)**
 
 2. **Clone the repository**:
-   ```git clone https://github.com/M-E-U-E/Assignment_6.git or git clone git@github.com:M-E-U-E/Assignment_6.git```
+   
+         git clone https://github.com/M-E-U-E/Assignment_6.git or git clone git@github.com:M-E-U-E/Assignment_6.git
    
     Go to the Directory:
     ```bash
