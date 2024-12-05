@@ -103,6 +103,9 @@ To clone this project to your local machine, follow these steps:
       docker-compose exec web python manage.py generate_sitemap
    ```
    This will create a sitemap.json containing all property locations.
+   
+   #### After this we can import or export csv file, json file.
+
 
 ## Test
   Run the testing file:
