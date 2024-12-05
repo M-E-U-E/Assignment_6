@@ -28,13 +28,14 @@ To clone this project to your local machine, follow these steps:
 
 1. **Open terminal (Command Prompt, PowerShell, or Terminal)**
 
-2. **Clone the repository**: git clone https://github.com/M-E-U-E/Assignment_6.git or git clone git@github.com:M-E-U-E/Assignment_6.git
+2. **Clone the repository**:
+   git clone https://github.com/M-E-U-E/Assignment_6.git or git clone git@github.com:M-E-U-E/Assignment_6.git
    
     Go to the Directory:
     ```bash
     cd assignment_6
     ```
-3. **Set Up Virtual Environment**
+4. **Set Up Virtual Environment**
    
     ```bash
     # Create virtual environment On macOS/Linux:
@@ -61,7 +62,7 @@ To clone this project to your local machine, follow these steps:
     pip install django-import-export
 
     ```
-4. **Docker Instructions**
+5. **Docker Instructions**
 
     To run the project using Docker, follow these steps:
 
