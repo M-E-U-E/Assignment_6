@@ -74,13 +74,13 @@ To clone this project to your local machine, follow these steps:
    
    Apply Migrations in Docker After the containers are up, run the migrations inside the Django container:
    ```
-   docker-compose exec web python manage.py makemigrations
-   docker-compose exec web python manage.py migrate
+   docker exec -it django_web python manage.py makemigrations
+   docker exec -it django_web python manage.py migrate
    ```
    
    Create a Superuser in Docker Create a superuser to access the admin panel:
    ```
-   docker exec -it web python manage.py createsuperuser
+   docker-compose exec web python manage.py createsuperuser
    ```
    then create superuser
 
@@ -94,7 +94,7 @@ To clone this project to your local machine, follow these steps:
 ## Sitemap Generation
    Run this code:
    ```
-      python manage.py generate_sitemap
+      docker-compose exec web python manage.py generate_sitemap
    ```
    This will create a sitemap.json containing all property locations.
 
