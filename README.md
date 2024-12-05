@@ -83,7 +83,12 @@ To clone this project to your local machine, follow these steps:
    docker-compose exec web python manage.py createsuperuser
    ```
    then create superuser
-
+   ```
+      Username (leave blank to use 'root'): 
+      Email address: 
+      Password: 
+      Password (again): 
+   ```
 ## Access the Application
 
       The Django application will be available at http://127.0.0.1:8000.
