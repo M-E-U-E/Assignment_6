@@ -82,15 +82,15 @@ To clone this project to your local machine, follow these steps:
    ```
    then create superuser
 
-##Access the Application
+## Access the Application
 
-The Django application will be available at http://127.0.0.1:8000.
-The admin panel can be accessed at http://127.0.0.1:8000/admin.
-The Signup panel can be accessed at http://127.0.0.1:8000/signup.
-The Login panel can be accessed at http://127.0.0.1:8000/login.
+      The Django application will be available at http://127.0.0.1:8000.
+      The admin panel can be accessed at http://127.0.0.1:8000/admin.
+      The Signup panel can be accessed at http://127.0.0.1:8000/signup.
+      The Login panel can be accessed at http://127.0.0.1:8000/login.
 
 
-#Test
+## Test
   Run the testing file:
    ```
       docker-compose run web coverage run manage.py test
