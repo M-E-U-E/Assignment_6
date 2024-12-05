@@ -204,6 +204,7 @@ Assignment_6/           # Root Django project directory
 
 ## Schema
   Database Schema (In-Memory):
+  ```
   Users Table:
   +----------+-----------+----------+-------+
   | id       | username  | email    | role  |
@@ -238,6 +239,7 @@ Assignment_6/           # Root Django project directory
   +----------+--------+----------+----------+-------------+------------+
   | string   | string | string   | string   | text        | datetime   |
   +----------+--------+----------+----------+-------------+------------+
+```
   
   ## Authorization Rules:
    ```
