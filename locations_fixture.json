@@ -1,0 +1,182 @@
+[
+    {
+        "model": "properties.location",
+        "pk": "LOC010",
+        "fields": {
+            "title": "France",
+            "center": "POINT(2.2137 46.2276)",
+            "parent_id": null,
+            "location_type": "Country",
+            "country_code": "FR",
+            "state_abbr": "",
+            "city": "",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC011",
+        "fields": {
+            "title": "Paris",
+            "center": "POINT(2.3522 48.8566)",
+            "parent_id": "LOC010",
+            "location_type": "City",
+            "country_code": "FR",
+            "state_abbr": "",
+            "city": "Paris",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC012",
+        "fields": {
+            "title": "Germany",
+            "center": "POINT(10.4515 51.1657)",
+            "parent_id": null,
+            "location_type": "Country",
+            "country_code": "DE",
+            "state_abbr": "",
+            "city": "",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC013",
+        "fields": {
+            "title": "Berlin",
+            "center": "POINT(13.4050 52.5200)",
+            "parent_id": "LOC012",
+            "location_type": "City",
+            "country_code": "DE",
+            "state_abbr": "",
+            "city": "Berlin",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC014",
+        "fields": {
+            "title": "Australia",
+            "center": "POINT(133.7751 -25.2744)",
+            "parent_id": null,
+            "location_type": "Country",
+            "country_code": "AU",
+            "state_abbr": "",
+            "city": "",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC015",
+        "fields": {
+            "title": "Sydney",
+            "center": "POINT(151.2093 -33.8688)",
+            "parent_id": "LOC014",
+            "location_type": "City",
+            "country_code": "AU",
+            "state_abbr": "",
+            "city": "Sydney",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC016",
+        "fields": {
+            "title": "India",
+            "center": "POINT(78.9629 20.5937)",
+            "parent_id": null,
+            "location_type": "Country",
+            "country_code": "IN",
+            "state_abbr": "",
+            "city": "",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC017",
+        "fields": {
+            "title": "Mumbai",
+            "center": "POINT(72.8777 19.0760)",
+            "parent_id": "LOC016",
+            "location_type": "City",
+            "country_code": "IN",
+            "state_abbr": "MH",
+            "city": "Mumbai",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC018",
+        "fields": {
+            "title": "South Africa",
+            "center": "POINT(22.9375 -30.5595)",
+            "parent_id": null,
+            "location_type": "Country",
+            "country_code": "ZA",
+            "state_abbr": "",
+            "city": "",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC019",
+        "fields": {
+            "title": "Cape Town",
+            "center": "POINT(18.4241 -33.9249)",
+            "parent_id": "LOC018",
+            "location_type": "City",
+            "country_code": "ZA",
+            "state_abbr": "",
+            "city": "Cape Town",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC020",
+        "fields": {
+            "title": "Brazil",
+            "center": "POINT(-51.9253 -14.2350)",
+            "parent_id": null,
+            "location_type": "Country",
+            "country_code": "BR",
+            "state_abbr": "",
+            "city": "",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "properties.location",
+        "pk": "LOC021",
+        "fields": {
+            "title": "Rio de Janeiro",
+            "center": "POINT(-43.1729 -22.9068)",
+            "parent_id": "LOC020",
+            "location_type": "City",
+            "country_code": "BR",
+            "state_abbr": "",
+            "city": "Rio de Janeiro",
+            "created_at": "2024-12-04T00:00:00Z",
+            "updated_at": "2024-12-04T00:00:00Z"
+        }
+    }
+]
