@@ -74,7 +74,8 @@ To clone this project to your local machine, follow these steps:
    
    Apply Migrations in Docker After the containers are up, run the migrations inside the Django container:
    ```
-   docker exec -it web python manage.py migrate
+   docker-compose exec web python manage.py makemigrations
+   docker-compose exec web python manage.py migrate
    ```
    
    Create a Superuser in Docker Create a superuser to access the admin panel:
