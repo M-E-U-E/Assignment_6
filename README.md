@@ -61,7 +61,7 @@ To clone this project to your local machine, follow these steps:
     pip install django-import-export
 
     ```
-4. **Docker Instructions
+4. **Docker Instructions**
 
     To run the project using Docker, follow these steps:
 
