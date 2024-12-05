@@ -92,6 +92,12 @@ To clone this project to your local machine, follow these steps:
       The Login panel can be accessed at http://127.0.0.1:8000/login.
 
 ## Sitemap Generation
+   Add locations through json file:
+   ```
+   docker-compose exec web python manage.py loaddata locations_fixture.json
+   ```
+   then generate the sitemap
+   
    Run this code:
    ```
       docker-compose exec web python manage.py generate_sitemap
